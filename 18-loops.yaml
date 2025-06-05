@@ -3,9 +3,9 @@
   become: yes
   tasks:
     - name: install packages
-      ansible.builtin.packages:
-       name: "{{ item }}"
-       state: installed
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: installed
       loop: 
         - mysql
         - nginx
