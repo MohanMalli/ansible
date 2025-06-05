@@ -1,0 +1,7 @@
+- name: understand vars preference
+  hosts: local
+  connection: local
+  tasks:
+   - name: print the greeting
+     ansible.builtin.debug:
+      msg: "{{ GREETING }}"
