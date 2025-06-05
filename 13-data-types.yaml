@@ -9,7 +9,7 @@
    - Linux
    - shell
    - Ansible
-   CONCEPT: # map or dictionary or object. referred link {}
+   CONCEPTS: # map or dictionary or object. referred link {}
      CI: Jenkins
      SCRIPTING: "Shell, Ansible, Terraform, Python"
   tasks:
