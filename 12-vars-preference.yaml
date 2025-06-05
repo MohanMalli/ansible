@@ -2,12 +2,15 @@
   hosts: local
   connection: local
 
+# 5. play are executing
   vars: 
     GREETING: "Hello from play"
 
+# 3. Files are executing
   vars_files:
   - course.yaml
 
+# 4. Prompt are executing
   vars_prompt:
   - name: GREETING 
     prompt: Please enter the greeting
@@ -15,27 +18,19 @@
 
   tasks:
   - name: print the greeting
-  
+
+# 2 .TASK executing
     vars:
       GREETING: "Hello from TASK"
+
+
     ansible.builtin.debug:
       msg: "{{ GREETING }}"
 
 
-# - name: understand vars preference
-#   hosts: local
-#   connection: local
-#   vars:
-#     GREETING: "Hello from PLAY"
-#   vars_files:
-#   - course.yaml
-#   vars_prompt:
-#   - name: GREETING
-#     prompt: Please enter the greeting
-#     private: false
-#   tasks:
-#   - name: print the greeting
-#     vars:
-#       GREETING: "Hello from TASK"
-#     ansible.builtin.debug:
-#       msg: "{{ GREETING }}"
+#  1. command line or args
+#  2. Task
+#  3. File
+#  4. prompt
+#  5. play
+#  6. inventory
