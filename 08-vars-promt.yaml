@@ -1,6 +1,6 @@
-- name:
-  hosts:
-  connection:
+- name: variable from vars_prompt
+  hosts: local
+  connection: local
   vars_prompt:
    - name: USERNAME
      promt: Please enter your USERNAME
