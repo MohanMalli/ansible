@@ -11,7 +11,7 @@
   vars_prompt:
     - name: GREETING 
       prompt: Please enter the greeting
-       private: false
+      private: false
 
   tasks:
     - name: print the greeting
