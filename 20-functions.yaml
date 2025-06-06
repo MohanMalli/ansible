@@ -4,11 +4,11 @@
   vars:
     persons: "Gopi,Suresh,Raheem,Joseph"
   tasks:
-      - name: check undefined variable
-        ansible.builtin.debug:
-         msg: "Hello, {{ persons  }}" 
+    - name: check undefined variable
+      ansible.builtin.debug:
+        msg: " Hello, {{ persons  }} " 
 
   
-      - name: check undefined variable
-        ansible.builtin.debug:
-         msg: "Hello, {{ persons | default (' Gopi ') }}"      
+    - name: check undefined variable
+      ansible.builtin.debug:
+        msg: " Hello, {{ persons | default ('Gopi') }} "      
