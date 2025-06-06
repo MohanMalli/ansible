@@ -6,13 +6,24 @@
   tasks:
     - name: check undefined variable
       ansible.builtin.debug:
-        msg: " Hello, {{ persons }} " 
+        msg: " Hello, {{ persons }} " # it call variables
 
   
     - name: check undefined variable
       ansible.builtin.debug:
-        msg: " Hello, {{ person | default ('Gopi') }} "    
+        msg: " Hello, {{ person | default ('Gopi') }} "   # default   
 
     - name: print names
       ansible.builtin.debug:
-        msg: " Hello, {{ persons | split ( ',' ) }} "       
+        msg: " Hello, {{ persons | split ( ',' ) }} "        
+ 
+    - name: convert map into list
+      vars:
+        course:
+          name: ansible
+          duration: 10HR
+          trainer: sivakumar
+      ansible.builtin.debug:
+        msg: " Course Info: {{ course | dict2items }}"    
+
+
