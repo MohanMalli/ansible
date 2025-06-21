@@ -11,6 +11,6 @@ fliters:
 hostnames:
  # you can also specify a list in order of percedence for hostname variables.
  - private-ip-address
-# compose:
-#  # this sets the 'ansible_host' varibale to connect with the private ip address without changing the host
-# ansible_host: private_ip_address    
+compose:
+  # this sets the 'ansible_host' varibale to connect with the private ip address without changing the host
+ansible_host: private_ip_address    
