@@ -13,4 +13,4 @@ hostnames:
   - private-ip-address
 compose:
   # this sets the 'ansible_host' varibale to connect with the private ip address without changing the host
-  ansible_host: private_ip_address    
+ ansible_host: private_ip_address    
