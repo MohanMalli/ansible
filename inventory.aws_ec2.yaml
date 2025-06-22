@@ -1,7 +1,8 @@
+### dynamic connections ###
 plugin: amazon.aws.aws_ec2
 regions:
 - us-east-1
-keyed_groups:
+keyed_groups:  # to get group name we are using this
 - key: tags.Name #dynamic-frontend
   prefix: "dynamic"
   seperator: "-"
