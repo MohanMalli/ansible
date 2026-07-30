@@ -1,7 +1,7 @@
  - name: Hello World
    hosts: local
-   coneection: local
-   tasks:
+   connection: local
+  tasks:
     - name: Print Hello World
       ansible.bultin.debug:
       msg: "Hello World "
